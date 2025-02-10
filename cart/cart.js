@@ -89,24 +89,64 @@ function displayCartItems() {
     updateTotals();
 }
 // "Buy Now" functionality
+// document.getElementById("buy-now").addEventListener("click", () => {
+//     if (cartData.length === 0) {
+//         // Notify user to add items to the cart
+//         alert("Your cart is empty. Please add items to your cart to proceed with the purchase.");
+//         return; // Prevent further action
+//     }
+
+//     // Calculate the total amount
+//     const totalAmount = cartData.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+
+//     // Confirm with the user before proceeding
+//     const userConfirmed = confirm(`The total amount is ₹${totalAmount.toFixed(2)}. Do you want to proceed?`);
+//     if (userConfirmed) {
+//         // Save total amount in localStorage and redirect to address page
+//         localStorage.setItem("cartTotal", JSON.stringify(totalAmount));
+//         window.location.href = ""; // Redirect to the address page
+//     }
+// });
 document.getElementById("buy-now").addEventListener("click", () => {
     if (cartData.length === 0) {
-        // Notify user to add items to the cart
-        alert("Your cart is empty. Please add items to your cart to proceed with the purchase.");
-        return; // Prevent further action
+        alert("Your cart is empty. Please add items to your cart to proceed.");
+        return;
     }
 
-    // Calculate the total amount
+    // Prompt for user details
+    const userName = prompt("Enter your name:");
+    const userPhone = prompt("Enter your phone number:");
+
+    if (!userName || !userPhone) {
+        alert("Please enter valid name and phone number.");
+        return;
+    }
+
+    // Create WhatsApp message
+    let orderMessage = `🛒 *New Order Received* \n\n👤 *Name:* ${userName}\n📞 *Phone:* ${userPhone}\n\n📦 *Cart Items:* \n`;
+
+    cartData.forEach((item, index) => {
+        orderMessage += `${index + 1}. *${item.name}* - ${item.quantity} x ₹${item.price} = ₹${(item.quantity * item.price).toFixed(2)}\n`;
+    });
+
     const totalAmount = cartData.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    orderMessage += `\n💰 *Total Amount:* ₹${totalAmount.toFixed(2)}`;
 
-    // Confirm with the user before proceeding
-    const userConfirmed = confirm(`The total amount is ₹${totalAmount.toFixed(2)}. Do you want to proceed?`);
-    if (userConfirmed) {
-        // Save total amount in localStorage and redirect to address page
-        localStorage.setItem("cartTotal", JSON.stringify(totalAmount));
-        window.location.href = "address.html"; // Redirect to the address page
-    }
+    // Encode for WhatsApp
+    const whatsappMessage = encodeURIComponent(orderMessage);
+    const whatsappURL = `https://wa.me/+919652180269?text=${whatsappMessage}`;
+
+    // Open WhatsApp
+    window.open(whatsappURL, "_blank");
+
+    // Clear cart after sending order
+    localStorage.removeItem("cartdata");
+    cartData = [];
+    displayCartItems();
 });
+
+
+
 displayCartItems();
 
 

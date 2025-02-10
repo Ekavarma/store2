@@ -42,7 +42,7 @@ function displaycard(y) {
             <div style="margin-top: 10px;">
                 <button class="addToCart" style="margin-bottom: 10px;">Add to Cart</button>
                 <button>
-                    <a href="./cart.html" style="text-decoration: none;">Go to Cart</a>
+                    <a href="../cart/cart.html" style="text-decoration: none;">Go to Cart</a>
                 </button>
             </div>
         `;

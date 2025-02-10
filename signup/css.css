@@ -1,0 +1,334 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-image: url("https://img.freepik.com/free-photo/frame-homemade-popsicle-ice-cream-with-copy-space_23-2148430649.jpg?t=st=1734370441~exp=1734374041~hmac=fecec6fdcc59d46a748ee72a7380cf9262b746b8ae119e5d24d68beccdc271ef&w=900");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#signup, #login {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 400px;
+    padding: 20px;
+    text-align: center;
+}
+.heading {
+    font-size: 32px;
+    font-weight: bold;
+    color: #FF6B6B;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="Number"] {
+    border-radius: 20px;
+    height: 40px;
+    width: calc(100% - 50px);
+    border: 1px solid #ccc;
+    padding: 0 15px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+input[type="password"]{
+    border-radius: 20px;
+    height: 40px;
+    width: calc(100% - 65px);
+    border: 1px solid #ccc;
+    padding: 0 15px;
+    font-size: 16px;
+    margin-left:10px;
+    margin-bottom: 15px;
+    display: inline-block;
+
+}
+
+.form-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.form-group input {
+    padding-right: 40px; /* Reserve space for the eye icon */
+}
+
+.form-group i {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    color: #ccc;
+    font-size: 18px;
+}
+
+/* .form-group i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #ccc;
+} */
+
+#submit {
+    color: white;
+    background-color: #FF6B6B;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#submit:hover {
+    background-color: #ff4b4b;
+}
+
+#signup p, #login p {
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+#signup p a, #login p a {
+    color: #FF6B6B;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#signup p a:hover, #login p a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+
+body {
+    background-image: url("https://t4.ftcdn.net/jpg/03/28/78/14/360_F_328781440_6Y9hEBhI1ZjdMwgFbtACnxDHzdrzSYPu.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#signup,
+#login {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 400px;
+    padding: 20px;
+    text-align: center;
+}
+
+.heading {s
+    font-size: 32px;
+    font-weight: bold;
+    color: #FF6B6B;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    border-radius: 20px;
+    height: 40px;
+    width: calc(100% - 50px);
+    border: 1px solid #ccc;
+    padding: 0 15px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-group i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #ccc;
+}
+
+#submit {
+    color: white;
+    background-color: #FF6B6B;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+
+
+
+
+#submit:hover {
+    background-color: #ff4b4b;
+}
+
+#signup p,
+#login p {
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+#signup p a,
+#login p a {
+    color: #FF6B6B;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#signup p a:hover,
+#login p a:hover {
+    text-decoration: underline;
+} */
+
+/* 
+*{
+    box-sizing: border-box;
+}
+#signup,#login{
+    display: flex;
+    flex-direction: column;
+    
+    background-color:lightgreen;
+    width:450px;
+    gap:10px;
+    box-shadow: 0 4px 8px 0 rgba(239, 226, 226, 0.2);
+    align-items: center;
+    justify-content: center;
+    padding:20px;
+    margin-left: 520px;
+    margin-top: 170px;
+    position: fixed;
+    border-radius: 10px;
+
+    
+
+
+
+}
+#form1,#form2{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    justify-content: center;
+    align-items: center;
+}
+#lab1{
+    margin-right: 250px;
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+#lab2{
+    margin-right: 220px;
+    font-weight: bold;
+    font-size: 20px;
+}
+#lab3{
+    margin-right: 250px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+body {
+    background-image: url("https://t3.ftcdn.net/jpg/04/41/67/18/360_F_441671872_0s1QAJmCpKd8fnYU80LB9MXz0GRQP8N8.jpg" );
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+  }
+#email,#name{
+    
+    border-radius: 20px;
+    height:40px;
+    width:300px;
+    border:none;
+    
+}
+#pswd{
+    border-radius: 20px;
+    height:40px;
+    width:280px;
+    border:none;
+    
+
+}
+#submit{
+    color:white;
+    background-color: green;
+    width:100px;
+    border-radius: 10px;
+    border:none;
+    height:30px;
+    font-size:20px
+}
+.heading{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+ */
