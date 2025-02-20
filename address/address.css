@@ -30,6 +30,10 @@ input, textarea {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
+img {
+    max-width: 100%;
+    height: auto;
+  }
 
 button {
     display: inline-block;

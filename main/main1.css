@@ -89,7 +89,10 @@ input[type="text"] {
     margin: 0 auto;
 
 }
-
+img {
+    max-width: 100%;
+    height: auto;
+  }
 .all button {
     display: block;
     margin: 0 auto;

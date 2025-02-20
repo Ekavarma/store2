@@ -39,7 +39,10 @@ label {
     text-align: left;
     margin-bottom: 5px;
 }
-
+img {
+    max-width: 100%;
+    height: auto;
+  }
 input[type="text"], input[type="Number"] {
     border-radius: 20px;
     height: 40px;
